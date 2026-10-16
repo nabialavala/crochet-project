@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet Project</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <main class="page-content">
+
+        <!-- 1. WELCOME SECTION -->
+        <section class="home-welcome">
+            <div class="welcome-text">
+                <h1>Website Name</h1>
+                <p>
+                    Discover your next crochet project! Explore creative
+                    patterns, save your favorites, and track your progress,
+                    all in one place.
+                </p>
+                <a href="/discover" class="home-button">
+                    Discover Projects
+                </a>
+            </div>
+
+            <div class="welcome-image">
+                <!-- Crochet workspace photo will go here -->
+                <div class="image-placeholder">
+                    Crochet Workspace Photo
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. FEATURED PROJECTS -->
+        <section class="home-featured">
+            <h2>Featured Projects</h2>
+
+            <div class="featured-carousel">
+                <button class="carousel-arrow" type="button"
+                        aria-label="Previous projects">
+                    &#10094;
+                </button>
+
+                <div class="featured-project-list">
+
+                    <article class="featured-card">
+                        <div class="project-image-placeholder">
+                            Project Photo
+                        </div>
+                        <h3>Granny Square Blanket</h3>
+                        <a href="/discover" class="home-button">
+                            View Project
+                        </a>
+                    </article>
+
+                    <article class="featured-card">
+                        <div class="project-image-placeholder">
+                            Project Photo
+                        </div>
+                        <h3>Crochet Tote Bag</h3>
+                        <a href="/discover" class="home-button">
+                            View Project
+                        </a>
+                    </article>
+
+                    <article class="featured-card">
+                        <div class="project-image-placeholder">
+                            Project Photo
+                        </div>
+                        <h3>Crochet Plush Bunny</h3>
+                        <a href="/discover" class="home-button">
+                            View Project
+                        </a>
+                    </article>
+
+                    <article class="featured-card">
+                        <div class="project-image-placeholder">
+                            Project Photo
+                        </div>
+                        <h3>Crochet Bucket Hat</h3>
+                        <a href="/discover" class="home-button">
+                            View Project
+                        </a>
+                    </article>
+
+                </div>
+
+                <button class="carousel-arrow" type="button"
+                        aria-label="Next projects">
+                    &#10095;
+                </button>
+            </div>
+        </section>
+
+        <!-- 3. HOW IT WORKS -->
+        <section class="home-how-it-works">
+            <h2>How It Works</h2>
+
+            <div class="how-it-works-cards">
+
+                <article class="how-card">
+                    <h3>1. Discover</h3>
+                    <p>
+                        Browse crochet projects created by the community
+                        and find inspiration for your next creation.
+                    </p>
+                </article>
+
+                <article class="how-card">
+                    <h3>2. Save</h3>
+                    <p>
+                        Save projects that interest you so you can
+                        easily find them again later.
+                    </p>
+                </article>
+
+                <article class="how-card">
+                    <h3>3. Track</h3>
+                    <p>
+                        Add projects to your tracker, organize your
+                        creations, and monitor your progress.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 4. VIDEO TUTORIAL -->
+        <section class="home-video">
+            <h2>How to Use This Website</h2>
+
+            <div class="video-placeholder">
+                <span aria-hidden="true">&#9654;</span>
+                <p>Video tutorial coming soon!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/home.js" defer></script>
+</body>
+</html>

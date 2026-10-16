@@ -1,0 +1,96 @@
+
+/* 1. ABOUT PAGE - SECTION LAYOUT */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.about-reverse .about-image {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.about-reverse .about-text {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* 2. ABOUT PAGE - TEXT */
+.about-text h1,
+.about-text h2 {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.about-text p {
+    font-family: 'Handlee', sans-serif;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+/* 3. ABOUT PAGE - IMAGES */
+.about-image {
+    width: 100%;
+}
+
+.about-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--lavender);
+    color: var(--warm-brown);
+    border-radius: 16px;
+    padding: 24px;
+    font-family: 'Handlee', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* 4. ABOUT PAGE - KEY FEATURES */
+.about-features {
+    padding-left: 24px;
+}
+
+.about-features li {
+    font-family: 'Handlee', sans-serif;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.about-features strong {
+    font-family: 'Bree Serif', serif;
+}
+
+/* 5. ABOUT PAGE - RESPONSIVE LAYOUT */
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-reverse .about-text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .about-reverse .about-image {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .about-text h1,
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .about-text p,
+    .about-features li {
+        font-size: 18px;
+    }
+}

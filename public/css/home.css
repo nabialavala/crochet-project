@@ -1,0 +1,259 @@
+
+/* 1. HOMEPAGE - WELCOME SECTION */
+.home-welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.welcome-text {
+    text-align: left;
+}
+
+.welcome-text h1 {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    font-family: 'Handlee', sans-serif;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.welcome-image {
+    width: 100%;
+}
+
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--lavender);
+    color: var(--warm-brown);
+    border-radius: 16px;
+    font-family: 'Handlee', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 24px;
+}
+
+/* 2. HOMEPAGE BUTTONS */
+.home-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--dusty-rose);
+    color: var(--warm-brown);
+    border-radius: 12px;
+    font-family: 'Bree Serif', serif;
+    font-size: 16px;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 3. HOMEPAGE - FEATURED PROJECTS */
+.home-featured h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.featured-carousel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.featured-project-list {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    flex: 1;
+    min-width: 0;
+    scrollbar-width: none;
+}
+
+.featured-project-list::-webkit-scrollbar {
+    display: none;
+}
+
+.featured-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.project-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--blush-pink);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.featured-card h3 {
+    font-family: 'Sour Gummy', sans-serif;
+    margin-bottom: 16px;
+}
+
+.carousel-arrow {
+    flex-shrink: 0;
+    background-color: var(--lavender);
+    color: var(--warm-brown);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 4. RESPONSIVE HOMEPAGE */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .featured-card {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .home-welcome {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .welcome-text h1 {
+        font-size: 36px;
+    }
+
+    .welcome-text p {
+        font-size: 18px;
+    }
+
+    .featured-carousel {
+        gap: 8px;
+    }
+
+    .featured-project-list {
+        gap: 16px;
+    }
+
+    .featured-card {
+        flex-basis: 100%;
+    }
+
+    .carousel-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+}
+
+/* 5. HOMEPAGE - HOW IT WORKS */
+.home-how-it-works h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.how-it-works-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.how-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.how-card h3 {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.how-card p {
+    font-family: 'Handlee', sans-serif;
+    font-size: 18px;
+}
+
+/* How It Works - Tablet */
+@media (max-width: 1024px) {
+    .how-it-works-cards {
+        gap: 16px;
+    }
+
+    .how-card {
+        padding: 24px;
+    }
+}
+
+/* How It Works - Mobile */
+@media (max-width: 768px) {
+    .how-it-works-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+/* 6. HOMEPAGE - VIDEO TUTORIAL */
+.home-video h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    background-color: var(--lavender);
+    color: var(--warm-brown);
+    border-radius: 16px;
+    text-align: center;
+    padding: 24px;
+}
+
+.video-placeholder span {
+    font-size: 64px;
+}
+
+.video-placeholder p {
+    font-family: 'Handlee', sans-serif;
+    font-size: 20px;
+}
+
+/* Video Tutorial - Mobile */
+@media (max-width: 768px) {
+    .video-placeholder span {
+        font-size: 40px;
+    }
+
+    .video-placeholder p {
+        font-size: 16px;
+    }
+}

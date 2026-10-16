@@ -1,0 +1,35 @@
+
+<nav class="navbar" aria-label="Main navigation">
+    <!-- Left: Navigation links -->
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/discover">Discover Projects</a>
+        <a href="/tracker">My Tracker</a>
+        <a href="/saved">Saved Projects</a>
+        <a href="/about">About</a>
+    </div>
+
+    <!-- Center: Branding -->
+    <a href="/" class="nav-brand">
+        <span class="logo-placeholder" aria-hidden="true"></span>
+        <span>Website Name</span>
+    </a>
+
+    <!-- Right: Account controls -->
+    <div class="nav-account">
+        <% if (typeof user !== 'undefined' && user) { %>
+            <details class="account-dropdown">
+                <summary><%= user.username %></summary>
+                <div class="account-menu">
+                    <a href="/profile">My Profile</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit">Logout</button>
+                    </form>
+                </div>
+            </details>
+        <% } else { %>
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+        <% } %>
+    </div>
+</nav>

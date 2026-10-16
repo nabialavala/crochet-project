@@ -1,0 +1,300 @@
+
+/* 1. GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Handlee&family=Sour+Gummy&display=swap');
+
+/* 2. COLOR PALETTE */
+:root {
+    --cream: #fff7e8;
+    --blush-pink: #F4C7D7;
+    --dusty-rose: #D99AAF;
+    --lavender: #CDBBEA;
+    --sage-green: #B8CFB1;
+    --butter-yellow: #F5DF9B;
+    --powder-blue: #B9D8E8;
+    --peach: #F6C4A8;
+    --warm-brown: #785A50;
+    --white: #FFFEFB;
+}
+
+/* 3. GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cream);
+    color: var(--warm-brown);
+    font-family: 'Handlee', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Sour Gummy', sans-serif;
+}
+
+p {
+    font-family: 'Handlee', sans-serif;
+}
+
+a {
+    color: inherit;
+    font-style: italic;
+}
+
+button, input, textarea, select {
+    font-family: 'Bree Serif', serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 4. NAVIGATION BAR */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "brand account"
+        "links links";
+    align-items: center;
+    gap: 20px;
+    padding: 16px 32px;
+    background-color: var(--sage-green);
+    color: var(--warm-brown);
+    width: 100%;
+}
+
+/* 5. NAVIGATION LINKS */
+.nav-links {
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.nav-links a {
+    font-family: 'Bree Serif', serif;
+    font-size: 16px;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--warm-brown);
+}
+
+.nav-links a:hover {
+    color: var(--dusty-rose);
+}
+
+/* 6. WEBSITE BRANDING */
+.nav-brand {
+    grid-area: brand;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--warm-brown);
+}
+
+.logo-placeholder {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: var(--lavender);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* 7. ACCOUNT CONTROLS */
+.nav-account {
+    grid-area: account;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-account a,
+.account-dropdown summary {
+    font-family: 'Bree Serif', serif;
+    font-size: 16px;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--warm-brown);
+}
+
+.nav-account a:hover {
+    color: var(--dusty-rose);
+}
+
+.account-dropdown {
+    position: relative;
+}
+
+.account-dropdown summary {
+    cursor: pointer;
+}
+
+.account-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 150px;
+    padding: 16px;
+    background-color: var(--white);
+    border-radius: 12px;
+}
+
+.account-menu button {
+    background: none;
+    border: none;
+    color: var(--warm-brown);
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.account-menu button:hover {
+    color: var(--dusty-rose);
+}
+
+/* 8. RESPONSIVE NAVIGATION */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-brand {
+        font-size: 22px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "brand account"
+            "links links";
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .nav-brand {
+        font-size: 20px;
+        min-width: 0;
+        white-space: normal;
+    }
+
+    .logo-placeholder {
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-account {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .account-menu {
+        right: 0;
+        transform: none;
+    }
+}
+
+/* 9. FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--butter-yellow);
+    color: var(--warm-brown);
+    padding: 20px 32px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-brand {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 24px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-family: 'Bree Serif', serif;
+    font-size: 16px;
+    color: var(--warm-brown);
+    text-decoration: none;
+    font-style: normal;
+}
+
+.footer-links a:hover {
+    color: var(--dusty-rose);
+}
+
+/* 10. SHARED PAGE LAYOUT */
+.page-content {
+    width: 100%;
+    padding: 48px;
+    flex: 1;
+}
+
+.page-content section + section {
+    margin-top: 48px;
+}
+
+.page-content h1 {
+    text-align: center;
+}
+
+/* Mobile page layout */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 48px 24px;
+    }
+}
