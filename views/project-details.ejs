@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= project ? project.title : "Project Not Found" %></title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/project-details.css">
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+
+    <main class="page-content">
+        <% if (!project) { %>
+
+            <section class="project-empty-state">
+                <h1>Project Not Found</h1>
+                <p>Sorry, we couldn't find that crochet project.</p>
+                <a href="/discover">Back to Discover Projects</a>
+            </section>
+
+        <% } else { %>
+
+            <section class="project-details">
+                <h1><%= project.title %></h1>
+
+                <img
+                    class="project-details-image"
+                    src="<%= project.image %>"
+                    alt="<%= project.title %>"
+                >
+
+                <div class="project-description">
+                    <h2>About This Project</h2>
+                    <p><%= project.description %></p>
+                </div>
+
+                <section class="project-materials">
+                    <h2>Materials Needed</h2>
+
+                    <% if (project.materials && project.materials.length > 0) { %>
+                        <ul>
+                            <% project.materials.forEach(material => { %>
+                                <li><%= material %></li>
+                            <% }) %>
+                        </ul>
+                    <% } else { %>
+                        <p>No materials have been listed yet.</p>
+                    <% } %>
+
+                    <h3>Yarn Type</h3>
+                    <p><%= project.yarn || "Not specified" %></p>
+
+                    <h3>Hook Size</h3>
+                    <p><%= project.hook || "Not specified" %></p>
+                </section>
+
+                <section class="project-instructions">
+                    <h2>Instructions</h2>
+
+                    <% if (project.instructions && project.instructions.length > 0) { %>
+                        <ol>
+                            <% project.instructions.forEach(instruction => { %>
+                                <li><%= instruction %></li>
+                            <% }) %>
+                        </ol>
+                    <% } else { %>
+                        <p>No instructions are available yet.</p>
+                    <% } %>
+                </section>
+
+                <section class="project-save">
+                    <% if (isLoggedIn) { %>
+                        <button type="button" id="save-project">
+                            Save Project
+                        </button>
+                    <% } else { %>
+                        <p>Log in to save this project.</p>
+                    <% } %>
+
+                    <p id="save-message" role="status" aria-live="polite"></p>
+                </section>
+
+                <a
+                    class="back-link"
+                    href="/discover"
+                    aria-label="Return to Discover Projects"
+                >
+                    ← Back to Discover Projects
+                </a>
+            </section>
+
+        <% } %>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script src="/js/project-details.js"></script>
+</body>
+</html>

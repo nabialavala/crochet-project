@@ -21,6 +21,7 @@
   "homepage": "https://github.com/nabialavala/crochet-project#readme",
   "dependencies": {
     "ejs": "^7.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mysql2": "^3.24.6"
   }
 }

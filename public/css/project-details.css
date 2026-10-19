@@ -1,0 +1,103 @@
+.project-details {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project-details h1 {
+    font-family: "Sour Gummy", sans-serif;
+    margin-bottom: 25px;
+}
+
+.project-details-image {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+}
+
+.project-description {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.project-description h2 {
+    font-family: "Sour Gummy", sans-serif;
+    margin-bottom: 15px;
+}
+
+.project-description p {
+    font-family: "Bree Serif", serif;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.project-materials,
+.project-instructions {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.project-materials h2,
+.project-instructions h2 {
+    font-family: "Sour Gummy", sans-serif;
+    margin-bottom: 15px;
+}
+
+.project-materials h3 {
+    font-family: "Sour Gummy", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.project-materials p,
+.project-materials li,
+.project-instructions li,
+.project-instructions p {
+    font-family: "Bree Serif", serif;
+    line-height: 1.6;
+}
+
+.project-materials ul,
+.project-instructions ol {
+    padding-left: 25px;
+}
+
+.project-materials li,
+.project-instructions li {
+    margin-bottom: 10px;
+}
+
+.project-save {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#save-project {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#save-message {
+    margin-top: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.project-empty-state {
+    text-align: center;
+    min-height: 300px;
+}
+
+.project-empty-state p {
+    margin: 20px 0;
+}
